@@ -20,7 +20,7 @@ class DemoButton extends React.Component {
     render() {
         return (
             <div>
-                <button className="button" onClick={this.handleClick}>
+                <button id="demo" className="button" onClick={this.handleClick}>
                     DEMO
             </button>
             </div>

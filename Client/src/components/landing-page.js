@@ -13,11 +13,12 @@ export function LandingPage(props) {
     return (
         <div className="hero-image">
             <div className="hero-text">
-                <h1>Balance your life</h1>
+                <h1><span className="balance">Balance</span> your life</h1>
                 <p>When you have control of your money, life seems easier.</p>
                 <p>We help get you to an easier life.</p>
                 <button className="sign-up-btn">Sign Up Free</button>
-                <button className="demo">Want a Demo</button>
+                <p>Want to try <span className="balance">Balance</span> out first?  Take a Demo</p>
+                <DemoButton />
             </div>
         </div>
     );

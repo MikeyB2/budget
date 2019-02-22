@@ -68,7 +68,7 @@ class Navbar extends React.Component {
                         <a href="#contact">Contact</a>
                         <a href="#about">About</a>
                         <div className="topnav-right">
-                            <a href="/register" className="sign-up-btn">Sign Up Free</a>
+                            <a href="/register" className="sign-up-nav">Sign Up Free</a>
                             <a href="/login" className="login-btn"><i className="fas fa-lock"></i> Login</a>
                         </div>
                         <a href="javascript:void(0);" className="icon" onclick="myFunction()">

@@ -13,9 +13,9 @@ export function RegistrationPage(props) {
     return (
         <div>
             <div className="home">
-                <h2>Register for Jabber Jaw</h2>
+                <h2>New to Balance?</h2>
                 <RegistrationForm />
-                <Link to="/login" className="register">Login</Link>
+                <Link to="/login" className="register">Already have an account?</Link>
             </div>
         </div>
     );
