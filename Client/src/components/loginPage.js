@@ -14,6 +14,7 @@ export function LoginPage(props) {
         <div>
             <div className="home">
                 <h2>Welcome back!</h2>
+                <span><i class="fas fa-user-shield fa-2x"></i></span>
                 <LoginForm />
                 <Link to="/register" className="register">Sign up! It's FREE!</Link>
             </div>

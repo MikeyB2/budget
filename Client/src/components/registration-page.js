@@ -12,8 +12,9 @@ export function RegistrationPage(props) {
     }
     return (
         <div>
-            <div className="home">
-                <h2>New to Balance?</h2>
+            <div className="registration-home">
+                <h2>New to <span className="balance">Balance</span>?</h2>
+                <span><i class="fas fa-user-shield fa-2x"></i></span>
                 <RegistrationForm />
                 <Link to="/login" className="register">Already have an account?</Link>
             </div>

@@ -31,6 +31,15 @@ html, body {
   height: 100%;
 }
 
+@media screen and (min-width: 1440px){
+  .app{
+  max-width: 1440px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,.08);
+  margin: 0 auto;
+  }
+}
+
 #root {
   height: 100%;
 }
@@ -57,10 +66,19 @@ html, body {
   text-decoration: underline;
 }
 
+/* .landingPage {
+  display: block;
+
+} */
+
 /* input */
 input {
   border: none;
   border-bottom: 1px solid var(--main-color);
+}
+
+input:hover {
+  border: 1px solid var(--main-color);
 }
 
 /* End of input */
@@ -137,6 +155,24 @@ input {
   border: solid 2px var(--main-color);
   border-radius: 10px;
   color: var(--main-color);
+}
+
+.button:disabled {
+  background-color: var(--send-message-form);
+  border: 1px solid var(--send-message-form);
+  color: grey;
+}
+
+.button:disabled:hover {
+  background-color: var(--send-message-form);
+  border: 1px solid var(--send-message-form);
+  color: grey;
+}
+
+.button:hover {
+  background-color: var(--main-color);
+  color: #575758;
+  border: 1px solid #575758;
 }
 
 
@@ -226,6 +262,7 @@ input {
 
 /* Registration Page */
 
+
 /* End of Registration Page */
 
 /* Login Page */
@@ -233,13 +270,40 @@ input {
 /* End of Login Page */
 
 
+/* Cards */
 
-@media screen and (max-width: 500px) {
-  .chatBubble {
-    background-color: rgb(185, 185, 185);
-  }
- 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+  display: inline-block;
 }
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* end of cards */
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
@@ -311,7 +375,7 @@ input {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;

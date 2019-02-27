@@ -8,7 +8,7 @@ const createChatId = (user) => {
     localStorage.setItem('username', user.username)
     localStorage.setItem('Name', Name)
     localStorage.setItem('Email', user.email)
-    alert(`Welcome to Jabber Jaw ${user.username}!`);
+    alert(`Welcome to Balance ${user.username}!`);
 }
 
 export const registerUser = user => dispatch => {

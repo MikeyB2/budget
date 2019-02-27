@@ -7,6 +7,7 @@ import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import { refreshAuthToken } from '../actions/auth';
 import Navbar from './navbar';
+import Footer from './footer';
 export class App extends React.Component {
 
     componentDidUpdate(prevProps) {
@@ -48,6 +49,9 @@ export class App extends React.Component {
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/login" component={LoginPage} />
+                <Route exact path="/contact" component={LoginPage} />
+                <Route exact path="/about" component={LoginPage} />
+                <Footer />
             </div>
         );
     }

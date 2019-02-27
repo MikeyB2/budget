@@ -2,18 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken, clearUsername } from '../local-storage';
-
-const customStyles = {
-    content: {
-        top: '20%',
-        left: '80%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-30%',
-        transform: 'translate(-50%, -50%)',
-
-    }
-};
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
 
@@ -23,6 +12,7 @@ class Navbar extends React.Component {
         this.state = {
         };
         this.handleClick = this.handleClick.bind(this)
+
     }
     handleClick = (e) => {
         e.preventDefault();
@@ -35,10 +25,6 @@ class Navbar extends React.Component {
         clearUsername();
     }
 
-
-
-
-
     render() {
         let logOutNav;
         const username = localStorage.getItem('username');
@@ -46,34 +32,31 @@ class Navbar extends React.Component {
         if (this.props.loggedIn) {
             logOutNav = (
                 <div className="topnav" id="myTopnav">
-                    <div id="myLinks">
-                        <a href="/" className="active"> Dashboard</a>
-                        <a href="#news" onClick={() => this.logOut()}>News</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#about">About</a>
-                        <li className="currentUser"><strong>{username}</strong></li>
-                        <a href="javascript:void(0);" className="icon" onclick="myFunction()">
-                            <i className="fa fa-bars"></i>
-                        </a>
-                    </div>
+                    <Link to="/" className="active"> Dashboard</Link>
+                    <Link to="#" onClick={() => this.logOut()}>Logout</Link>
+                    <Link to="#contact">Contact</Link>
+                    <Link to="#about">About</Link>
+                    <li className="currentUser"><strong>{username}</strong></li>
+                    <Link to="javascript:void(0);" className="icon" onClick="myFunction()">
+                        <i className="fa fa-bars"></i>
+                    </Link>
                 </div>
             );
         };
         let loginNav;
         if (!this.props.loggedIn) {
             loginNav = (
-                <div className="topnav">
-                    <div id="myLinks">
-                        <a href="/" className="active"> Home</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#about">About</a>
-                        <div className="topnav-right">
-                            <a href="/register" className="sign-up-nav">Sign Up Free</a>
-                            <a href="/login" className="login-btn"><i className="fas fa-lock"></i> Login</a>
-                        </div>
-                        <a href="javascript:void(0);" className="icon" onclick="myFunction()">
-                            <i className="fa fa-bars"></i>
-                        </a>
+                <div className="topnav" id="myTopnav">
+                    <Link to="/" className="active"> Home</Link>
+                    <Link to="#contact">Contact</Link>
+                    <Link to="#about">About</Link>
+
+                    <Link to="javascript:void(0);" className="icon" onClick="myFunction()">
+                        <i className="fa fa-bars"></i>
+                    </Link>
+                    <div className="topnav-right">
+                        <Link to="/register" className="sign-up-nav topnav-right">Sign Up Free</Link>
+                        <Link to="/login" className="login-btn topnav-right"><i className="fas fa-lock"></i> Login</Link>
                     </div>
                 </div>
             );

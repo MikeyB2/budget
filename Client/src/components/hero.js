@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import DemoButton from './demoButton';
 
-export function LandingPage(props) {
+export function Hero(props) {
     // If we are logged in redirect straight to the user's dashboard
 
     if (props.loggedIn) {
@@ -21,6 +21,7 @@ export function LandingPage(props) {
                 <DemoButton />
             </div>
         </div>
+
     );
 }
 
@@ -28,4 +29,4 @@ const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(LandingPage);
+export default connect(mapStateToProps)(Hero);

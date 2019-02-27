@@ -50,7 +50,7 @@ const storeAuthInfo = (authToken, dispatch) => {
 
 const authChatuser = (username) => {
     localStorage.setItem('username', username);
-    alert(`Welcome to Jabber Jaw ${username}!`);
+    alert(`Welcome to Balance ${username}!`);
 }
 
 export const login = (username, password) => dispatch => {
